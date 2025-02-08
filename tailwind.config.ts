@@ -14,13 +14,13 @@ export default {
     extend: {
       colors: {
         primary: "#88BDBC",
-        secondary: "#254E58",
-        accent: "#6E6668",
-        text: "#4F4A41",
-        dark: "#112D32",
+        secondary: "#1d4ed7",
+        accent: "#1e40af",
+
+        text: "#BFDBFE",
       },
       backgroundColor: {
-        DEFAULT: "#88BDBC",
+        DEFAULT: "#eff6ff",
       },
     },
   },

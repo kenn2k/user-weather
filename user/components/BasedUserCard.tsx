@@ -17,7 +17,7 @@ export const BaseUserCard = ({
   onWeatherClick,
   actionButton,
 }: IUser) => (
-  <div className="bg-white p-6 rounded-lg shadow-lg">
+  <div className="bg-white p-6 rounded-lg border-2 border-gray-50 shadow-md">
     <div className="text-dark flex items-center flex-col justify-center space-y-3">
       <Avatar picture={picture} />
       <UserInfo name={name} gender={gender} location={location} email={email} />
