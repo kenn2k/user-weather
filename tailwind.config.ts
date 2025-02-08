@@ -18,6 +18,9 @@ export default {
         accent: "#1e40af",
 
         text: "#BFDBFE",
+        grayText: "#6B7280",
+        darkText: "#374151",
+        emailText: "#2563EB",
       },
       backgroundColor: {
         DEFAULT: "#eff6ff",

@@ -2,7 +2,6 @@
 
 import { BaseUserCard } from "@/user/components/BasedUserCard";
 import { useSavedUsers } from "@/user/hooks/useSavedUsers";
-
 import { LocationCords, User, UserCardAction } from "@/user/types";
 import { WeatherModal } from "@/weather/components/WeatherModal";
 import { useState } from "react";
@@ -40,16 +39,22 @@ export const UserList = ({ users, mode }: UserListProps) => {
 
   return (
     <>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-        {users.map((user: User) => (
-          <BaseUserCard
-            key={user.login.uuid}
-            {...user}
-            onWeatherClick={() => setSelectedCoords(user.location.coordinates)}
-            actionButton={getActionButton(user)}
-          />
-        ))}
-      </div>
+      {users.length ? (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+          {users.map((user) => (
+            <BaseUserCard
+              key={user.login.uuid}
+              {...user}
+              onWeatherClick={() =>
+                setSelectedCoords(user.location.coordinates)
+              }
+              actionButton={getActionButton(user)}
+            />
+          ))}
+        </div>
+      ) : (
+        <p className="text-center text-gray-500">No Saved Users...</p>
+      )}
       {selectedCoords && (
         <WeatherModal
           {...selectedCoords}
