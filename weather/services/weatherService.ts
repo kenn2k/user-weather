@@ -1,4 +1,4 @@
-import { weatherApiInstance } from "@/weather/api/weatherService";
+import { weatherApiInstance } from "@/weather/api/instance";
 
 export const weatherService = {
   getWeather: async (latitude: number, longitude: number) => {

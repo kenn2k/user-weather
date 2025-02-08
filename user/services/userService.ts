@@ -1,4 +1,4 @@
-import { usersApiInstance } from "@/user/api/userService";
+import { usersApiInstance } from "@/user/api/instance";
 import { User, UserResponse } from "@/user/types";
 
 export const userService = {
